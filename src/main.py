@@ -19,8 +19,9 @@ if authorized:
     df = pd.DataFrame(rates)
     df['time'] =  pd.to_datetime(df['time'],unit='s')
     data = df.to_csv(r'C:\Users\Administrator\work\RLTrading\Bot\data\raw\1hour_data.csv',index=False)
+    # print(data)
+    
+    
+    data = pd.read_csv(r'C:\Users\Administrator\work\RLTrading\Bot\data\raw\1hour_data.csv')
     print(data)
-# print(help(datetime))
-# print(mt5.version())
-# print(mt5.__dict__)
 mt5.shutdown()
